@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:weightSum="1" android:orientation="horizontal" android:layout_width="match_parent" android:baselineAligned="true" android:layout_height="wrap_content">
+    <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout1" android:orientation="vertical" android:weightSum="1" android:layout_width="162dp">
+        <TextView android:text="环境检测" android:layout_height="wrap_content" android:id="@+id/textViewEnv" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center" android:clickable="true" android:visibility="visible" android:textColor="#ff0000" android:layout_width="92dp"></TextView>
+        <TextView android:layout_height="wrap_content" android:id="@+id/textServTemp" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent" android:duplicateParentState="true" android:text="温度：     26度" android:layout_gravity="center_vertical"></TextView>
+        <TextView android:text="湿度：    46%" android:layout_height="wrap_content" android:id="@+id/textServHumidity" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent"></TextView>
+        <TextView android:text="CO： 0 ppm" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textServCO" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <TextView android:text="甲烷：    0.03%" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textServCH4" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <TextView style="@style/styleName" android:text="生命探测仪：  无法现" android:id="@+id/textServLife" android:layout_width="136dp" android:layout_height="18dp"></TextView>
+        <TextView android:text=" " android:layout_width="101dp" android:id="@+id/TextView01" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content"></TextView>
+        <TextView android:text="摄像头对焦: 25%" android:layout_height="wrap_content" android:id="@+id/textCarmerDest" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_gravity="center" android:layout_width="wrap_content"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:layout_width="match_parent" android:id="@+id/linearLayout4">
+            <SeekBar android:layout_height="match_parent" android:layout_weight="1" android:max="90" android:layout_width="match_parent" android:progress="25" android:id="@+id/SeekBarCam" android:soundEffectsEnabled="true" android:scrollbarStyle="insideOverlay"></SeekBar>
+        </LinearLayout>
+        <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:text="旋转臂方向：停止" android:id="@+id/TextViewArmState" android:layout_gravity="center" android:layout_width="112dp"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:layout_weight="0.82" android:weightSum="1" android:layout_width="match_parent" android:id="@+id/LinearLayout01">
+            <FrameLayout android:layout_height="162dp" android:layout_width="match_parent" android:id="@+id/FrameLayout03">
+                <com.xmoblieapp.cammonitor.Rundder android:layout_height="match_parent" android:id="@+id/RundderArm" android:layout_gravity="bottom" android:layout_width="match_parent"></com.xmoblieapp.cammonitor.Rundder>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout2" android:orientation="vertical" android:weightSum="1" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:layout_height="match_parent" android:layout_width="wrap_content" android:layout_weight="0.99">
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:text="监控界面" android:id="@+id/textView1" android:layout_gravity="center" android:layout_height="28dp" android:layout_width="90dp"></TextView>
+            <FrameLayout android:id="@+id/frameLayout1" android:layout_width="match_parent" android:layout_height="277dp">
+                <com.xmobileapp.cammonitor.CamMonitorView android:id="@+android:id/cmView" android:layout_width="fill_parent"
+					android:drawSelectorOnTop="false" android:layout_height="match_parent"/>
+            </FrameLayout>
+        <LinearLayout android:id="@+id/linearLayout6" android:orientation="horizontal" android:weightSum="1" android:baselineAligned="false" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_marginTop="0dip" android:layout_height="match_parent">
+            <LinearLayout android:id="@+id/linearLayout7" android:orientation="vertical" android:layout_width="192dp" android:layout_weight="1.10" android:layout_height="wrap_content">
+                <TextView android:duplicateParentState="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="运动速度： 0%" android:id="@+id/TextViewSpeed" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_gravity="center"></TextView>
+                <SeekBar android:layout_height="match_parent" android:max="90" android:scrollbarStyle="insideOverlay" android:layout_weight="1" android:layout_width="match_parent" android:soundEffectsEnabled="true" android:progress="0" android:id="@+id/SeekBarMoveSpeed"></SeekBar>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageViewPointSet" android:scaleType="fitXY" android:clickable="true" android:src="@drawable/confirm" android:layout_height="match_parent" android:layout_width="50dp"></ImageView>
+            <ImageView android:src="@drawable/stop4" android:scaleType="fitXY" android:layout_width="52dp" android:clickable="true" android:id="@+id/imageViewStop" android:layout_height="match_parent"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="match_parent" android:orientation="vertical" android:id="@+id/linearLayout3" android:layout_gravity="left" android:scrollbarStyle="outsideOverlay" android:weightSum="1" android:layout_width="162dp">
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout9" android:layout_height="27dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/textView2" android:layout_height="wrap_content" android:text="     "></TextView>
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="90dp" android:textColor="#ff0000" android:id="@+id/TextViewSystem" android:layout_gravity="center" android:clickable="true" android:layout_height="wrap_content" android:text="系统状态"></TextView>
+            <ImageView android:clickable="true" android:id="@+id/imageViewReturn" android:scaleType="fitXY" android:src="@drawable/return2" android:layout_width="wrap_content" android:layout_height="match_parent"></ImageView>
+        </LinearLayout>
+        <TextView android:text="工作时间： 0.1分钟" android:layout_height="wrap_content" android:duplicateParentState="true" android:layout_width="match_parent" android:id="@+id/TextViewWorkTime" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <TextView android:text="主电电压： 12.6V" android:layout_height="wrap_content" android:duplicateParentState="true" android:layout_width="match_parent" android:id="@+id/TextViewMainVoltage" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <TextView android:duplicateParentState="true" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent" android:id="@+id/TextViewSignal" android:layout_height="wrap_content" android:text="信号强度： 强"></TextView>
+        <TextView android:text="已放置节点数量:0" android:layout_height="wrap_content" android:duplicateParentState="true" android:layout_width="match_parent" android:id="@+id/textPointCnts" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <TextView android:layout_height="wrap_content" android:duplicateParentState="true" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent" android:text="机器人状态：正常" android:id="@+id/TextViewRobotState"></TextView>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:layout_gravity="center" android:layout_width="101dp" android:text=" " android:id="@+id/TextView03" android:layout_height="wrap_content"></TextView>
+        <TextView android:layout_height="20dip" android:layout_weight="0.02" android:layout_width="120dp" android:textAppearance="?android:attr/textAppearanceSmall" android:text="旋转臂状态：停止" android:id="@+id/TextViewAngle" android:duplicateParentState="true" android:layout_gravity="center"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:orientation="horizontal" android:layout_width="match_parent" android:id="@+id/linearLayout5">
+            <FrameLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/frameLayout2">
+                <SeekBar android:layout_height="match_parent" android:max="90" android:progress="50" android:id="@+id/seekBarAngle" android:layout_width="match_parent" android:soundEffectsEnabled="true" android:scrollbarStyle="insideOverlay"></SeekBar>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout8" android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/FrameLayout01" android:layout_height="match_parent" android:layout_width="match_parent">
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:text="运动控制" android:layout_height="wrap_content" android:layout_width="60dp" android:id="@+id/TextView05" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_weight="0.01"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout10" android:weightSum="1" android:layout_width="match_parent" android:layout_weight="0.82">
+            <FrameLayout android:id="@+id/FrameLayout02" android:layout_width="match_parent" android:layout_height="162dp">
+                <com.xmoblieapp.cammonitor.Rundder android:id="@+id/RudderMove" android:layout_width="match_parent" android:layout_gravity="bottom" android:layout_height="match_parent"></com.xmoblieapp.cammonitor.Rundder>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

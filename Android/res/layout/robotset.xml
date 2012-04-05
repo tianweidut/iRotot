@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="match_parent">
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout5" android:layout_width="wrap_content" android:orientation="vertical" android:weightSum="1">
+            <TextView android:text="机器人状态" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="30dp" android:layout_width="114dp" android:layout_gravity="center"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotWorkTime" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/WorkTime" android:layout_marginTop="15dp"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotMainVoltage" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/MainVoltage"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotSubVoltage" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/SubVoltage"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:text="" android:layout_height="30dp" android:layout_width="114dp" android:id="@+id/TextView01" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+            <RadioGroup android:id="@+id/rGButtonPath" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="vertical">
+            <RadioButton android:id="@+id/radioAuto" android:text="@string/chk_auto" android:layout_width="176dp" android:layout_height="36dp" android:checked="true"></RadioButton>
+            <RadioButton android:id="@+id/radioMan" android:text="@string/chk_man" android:layout_width="match_parent" android:layout_height="32dp"></RadioButton>
+            <RadioButton android:layout_height="wrap_content" android:id="@+id/radioAutoPath" android:text="@string/chk_auto_path" android:layout_width="160dp"></RadioButton>          
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout3" android:layout_width="wrap_content" android:orientation="vertical" android:weightSum="1">
+            <TextView android:text="机器人状态" android:layout_height="30dp" android:layout_width="114dp" android:id="@+id/TextView02" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotSetPoints" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/pointCnts" android:layout_marginTop="15dp"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotRemindPoints" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/remaind_pointCnts"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textRobotWiFi" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/intensity_signal"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout4" android:orientation="vertical" android:layout_width="match_parent" android:layout_marginTop="15dp">
+            <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout7" android:layout_width="match_parent">
+                <Button android:layout_height="wrap_content" android:id="@+id/btnRobotPointsSet" android:layout_weight="1" android:layout_width="0dp" android:text="@string/btn_setPoint"></Button>
+                <Button android:layout_height="wrap_content" android:id="@+id/btnRobotRemainPoints" android:layout_weight="1" android:layout_width="0dp" android:text="回收节点"></Button>
+            </LinearLayout>
+            <Button android:layout_height="wrap_content" android:id="@+id/btnRobotNetwork" android:layout_width="match_parent" android:text="@string/btn_network"></Button>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/linearLayout10">
+                <Button android:layout_height="wrap_content" android:id="@+id/btnRobotReturn" android:text="返回" android:layout_weight="1" android:layout_width="0dp"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/linearLayout8" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+        <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout9" android:layout_width="wrap_content" android:orientation="vertical" android:layout_weight="0.57">
+            <TextView android:text="机器人姿态" android:layout_height="30dp" android:layout_width="114dp" android:id="@+id/TextView03" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_gravity="center"></TextView>
+            <TextView android:id="@+id/textRobotRollAngle" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/roll_angle" android:layout_width="match_parent" android:layout_height="18dp" android:layout_marginTop="15dp"></TextView>
+            <TextView android:id="@+id/textRobotYawAngle" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/yaw_angle" android:layout_width="match_parent" android:layout_height="17dp"></TextView>
+            <TextView android:id="@+id/textRobotPitchAngle" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent" android:layout_height="16dp" android:text="@string/pitch_angle"></TextView>
+            <TextView android:id="@+id/textRobotWhirlArm" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="match_parent" android:layout_height="17dp" android:text="@string/whirling_arm"></TextView>
+            <ProgressBar android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/progressBarRobot" style="?android:attr/progressBarStyleLarge" android:layout_gravity="center" android:layout_marginTop="8dp"></ProgressBar>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageView11" android:layout_height="wrap_content" android:src="@drawable/fix" android:scaleType="fitXY" android:layout_width="203dp" android:layout_marginLeft="10dip"></ImageView>
+        <ImageView android:id="@+id/imageView22" android:layout_height="wrap_content" android:src="@drawable/fix" android:scaleType="fitXY" android:layout_width="202dp" android:layout_marginLeft="15dip"></ImageView>
+    </LinearLayout>
+    
+</LinearLayout>

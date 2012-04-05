@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:orientation="horizontal" android:weightSum="1" android:baselineAligned="false" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout1" android:orientation="vertical" android:weightSum="1" android:layout_width="0dp" android:layout_weight="0.50">
+        <TextView android:text="环境检测器设置" android:layout_height="30dp" android:layout_width="155dp" android:id="@+id/textView1" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/LinearLayout02" android:layout_marginTop="3dp" android:weightSum="1" android:layout_height="186dp">
+            <RadioGroup android:layout_height="wrap_content" android:id="@+id/radioGroupEnvMain" android:layout_weight="0.50" android:layout_width="0dp">
+                <RadioButton android:layout_height="wrap_content" android:id="@+id/radiotemperature" android:text="温度：     26度" android:checked="true" android:layout_width="match_parent"></RadioButton>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/radioCH4" android:text="甲烷：    0.03%"></RadioButton>
+                <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/radioCO" android:text="CO：    0.05%"></RadioButton>
+                <RadioButton android:text="湿度：    46%" android:id="@+id/radioHumdity" android:layout_width="wrap_content" android:layout_height="wrap_content"></RadioButton>
+            </RadioGroup>
+            <LinearLayout android:id="@+id/linearLayout8" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="0.50" android:layout_width="0dp" android:weightSum="1" android:layout_marginLeft="2dip" android:layout_marginRight="2dip">
+                <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout9" android:layout_weight="0.25" android:layout_height="0dp">
+                    <Button android:id="@+id/btnsetEnvAlarm" android:layout_height="match_parent" android:text="设置" android:layout_weight="1" android:layout_width="0dp"></Button>
+                    <Button android:id="@+id/btncancelEnvAlarm" android:layout_height="wrap_content" android:text="取消报警" android:layout_weight="1" android:layout_width="0dp"></Button>
+                </LinearLayout>
+                <EditText android:id="@+id/editTextAlarm" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.25" android:hint="请输入报警值">
+                    <requestFocus></requestFocus>
+                </EditText>
+                <Button android:id="@+id/btnSaveAlterNum" android:text="保存" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.25"></Button>
+                <Button android:layout_weight="0.25" android:id="@+id/buttonDataHistory" android:text="历史" android:layout_height="0dp" android:layout_width="match_parent"></Button>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:text="生命探测器设置" android:layout_height="30dp" android:layout_width="155dp" android:id="@+id/TextView06" android:layout_gravity="center" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_marginTop="4dp"></TextView>
+        <LinearLayout android:layout_marginTop="3dp" android:weightSum="1" android:id="@+id/LinearLayout06" android:layout_width="match_parent" android:layout_height="46dp">
+            <Button android:id="@+id/btnStartTurn" android:text="转动" android:layout_width="76dp" android:layout_weight="0.50" android:layout_height="match_parent"></Button>
+            <Button android:id="@+id/btnStopTurn" android:text="停止" android:layout_width="43dp" android:layout_weight="0.50" android:layout_height="match_parent"></Button>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1">
+            <ProgressBar android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/progressBarLife" style="?android:attr/progressBarStyleLarge"></ProgressBar>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textEnvLife" android:textAppearance="?android:attr/textAppearanceLarge" android:text="@string/check_life" android:layout_gravity="center" android:layout_marginLeft="55dp" android:layout_weight="0.67"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="match_parent" android:id="@+id/linearLayout2" android:orientation="vertical" android:layout_marginRight="1dp" android:layout_gravity="fill_horizontal" android:layout_width="0dp" android:layout_weight="0.50" android:layout_marginLeft="3dp">
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout17" android:weightSum="1" android:layout_height="36dp">
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/TextView19" android:layout_gravity="center" android:layout_height="30dp" android:text="  " android:layout_width="72dp" android:layout_weight="0.17"></TextView>
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="155dp" android:id="@+id/TextView01" android:layout_gravity="center" android:layout_height="30dp" android:text="外部传感器接入" android:layout_weight="0.80"></TextView>
+            <ImageView android:layout_width="wrap_content" android:id="@+id/imageViewEnvReturn" android:layout_height="wrap_content" android:src="@drawable/return2" android:clickable="true" android:scaleType="fitXY"></ImageView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:layout_marginTop="8dp" android:weightSum="1" android:id="@+id/LinearLayout09" android:layout_width="match_parent">
+            <TextView android:text="@string/channel1" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/textChannel1" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+            <TextView android:text="@string/channel5" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/textChannel5" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:id="@+id/LinearLayout08" android:layout_width="match_parent" android:layout_marginTop="3dp">
+            <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/textChannel2" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/channel2" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/textChannel6" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/channel6" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:id="@+id/LinearLayout07" android:layout_width="match_parent" android:layout_marginTop="3dp">
+            <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/textChannel3" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/channel3" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+            <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/textChannel7" android:textAppearance="?android:attr/textAppearanceMedium" android:text="@string/channel7" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout4" android:layout_width="match_parent" android:weightSum="1" android:layout_marginTop="3dp">
+            <TextView android:layout_height="wrap_content" android:id="@+id/textChannel4" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="4dp" android:text="@string/channel4" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+            <TextView android:layout_height="wrap_content" android:id="@+id/textChannel8" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_marginLeft="3dp" android:text="@string/channel8" android:layout_weight="0.50" android:layout_width="0dp"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout7" android:layout_height="wrap_content" android:layout_marginTop="5dip">
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/textView2" android:layout_gravity="center_horizontal" android:text="   通道配置开关" android:layout_weight="1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="3dip"></TextView>
+            <ToggleButton android:text="配置开关" android:layout_height="match_parent" android:id="@+id/toggleConfig" android:layout_width="0dp" android:layout_weight="1" android:textOn="开启" android:textOff="关闭"></ToggleButton>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout5" android:layout_width="match_parent" android:weightSum="1" android:layout_height="match_parent">
+            <TextView android:text="超声波传感器" android:layout_height="wrap_content" android:id="@+id/textView6" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center_vertical" android:layout_marginLeft="3dp" android:layout_width="0dp" android:layout_weight="0.09"></TextView>
+            <AbsoluteLayout android:layout_height="match_parent" android:id="@+id/absoluteLayout1" android:layout_width="0dp" android:layout_weight="0.76">
+                <ImageView android:id="@+id/imageView1" android:src="@drawable/robot" android:layout_x="2dp" android:layout_y="0dp" android:scaleType="fitXY" android:layout_height="match_parent" android:layout_width="184dp"></ImageView>
+                <ImageView android:id="@+id/imageViewFowd" android:src="@drawable/button" android:scaleType="fitXY" android:layout_x="100dp" android:layout_y="33dp" android:layout_width="22dp" android:layout_height="13dp" android:visibility="invisible"></ImageView>
+                <ImageView android:layout_width="22dp" android:id="@+id/ImageViewFowdRight" android:src="@drawable/button" android:scaleType="fitXY" android:layout_height="13dp" android:layout_x="155dp" android:layout_y="60dp" android:visibility="invisible"></ImageView>
+                <ImageView android:layout_width="22dp" android:id="@+id/ImageViewFowdLeft" android:src="@drawable/button" android:scaleType="fitXY" android:layout_height="13dp" android:layout_x="55dp" android:layout_y="60dp" android:visibility="invisible"></ImageView>
+                <ImageView android:src="@drawable/button" android:scaleType="fitXY" android:layout_height="13dp" android:id="@+id/ImageView0BackLeft" android:layout_width="22dp" android:layout_x="55dp" android:layout_y="100dp" android:visibility="invisible"></ImageView>
+                <ImageView android:src="@drawable/button" android:scaleType="fitXY" android:layout_height="13dp" android:id="@+id/ImageView0BackRight" android:layout_width="22dp" android:layout_x="155dp" android:layout_y="100dp" android:visibility="invisible"></ImageView>
+                <ImageView android:src="@drawable/button" android:scaleType="fitXY" android:layout_height="13dp" android:id="@+id/ImageView0Back" android:layout_width="22dp" android:layout_x="100dp" android:layout_y="130dp" android:visibility="invisible"></ImageView>
+            </AbsoluteLayout>
+            <LinearLayout android:id="@+id/linearLayout6" android:orientation="vertical" android:weightSum="1" android:layout_gravity="center" android:layout_marginLeft="18dp" android:layout_width="80dp" android:layout_height="132dp">
+                <TextView android:text="@string/sensor_ford" android:layout_height="wrap_content" android:layout_width="78dp" android:id="@+id/textSensorFor" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+                <TextView android:layout_height="wrap_content" android:layout_width="78dp" android:id="@+id/textSensorForLeft" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_ford_left" android:layout_marginTop="3dp"></TextView>
+                <TextView android:layout_height="wrap_content" android:layout_width="78dp" android:id="@+id/textSensorForRight" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_ford_right" android:layout_marginTop="3dp"></TextView>
+                <TextView android:layout_height="wrap_content" android:layout_width="78dp" android:id="@+id/textSensorBack" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back" android:layout_marginTop="3dp"></TextView>
+                <TextView android:layout_height="wrap_content" android:layout_width="78dp" android:id="@+id/textSensorBackLeft" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back_left" android:layout_marginTop="3dp"></TextView>
+                <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/textSensorBackRight" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back_right" android:layout_width="78dp"></TextView>
+                <LinearLayout android:layout_height="match_parent" android:layout_weight="0.50" android:layout_marginRight="1dp" android:orientation="vertical" android:layout_marginLeft="3dp" android:layout_gravity="fill_horizontal" android:layout_width="0dp" android:id="@+id/LinearLayout15">
+                    <TextView android:layout_height="30dp" android:layout_gravity="center" android:id="@+id/TextView18" android:textAppearance="?android:attr/textAppearanceLarge" android:text="外部传感器接入" android:layout_width="155dp"></TextView>
+                    <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:layout_marginTop="8dp" android:layout_width="match_parent" android:id="@+id/LinearLayout11">
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/TextView10" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel1" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.12" android:layout_width="wrap_content"></Button>
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/TextView04" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel5" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.14" android:layout_width="wrap_content"></Button>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:layout_marginTop="3dp" android:layout_width="match_parent" android:id="@+id/LinearLayout10">
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/TextView09" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel2" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.12" android:layout_width="wrap_content"></Button>
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/TextView03" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel6" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.14" android:layout_width="wrap_content"></Button>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:layout_marginTop="3dp" android:layout_width="match_parent" android:id="@+id/LinearLayout16">
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/TextView12" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel3" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.12" android:layout_width="wrap_content"></Button>
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/TextView07" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel7" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.14" android:layout_width="wrap_content"></Button>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="wrap_content" android:weightSum="1" android:layout_marginTop="3dp" android:layout_width="match_parent" android:id="@+id/LinearLayout13">
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:id="@+id/TextView11" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel4" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.12" android:layout_width="wrap_content"></Button>
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:id="@+id/TextView05" android:layout_weight="0.34" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/channel8" android:layout_width="wrap_content"></TextView>
+                        <Button android:layout_height="34dp" android:id="@+id/Button01" android:layout_marginLeft="3dp" android:text="@string/btn_config" android:layout_weight="0.14" android:layout_width="wrap_content"></Button>
+                    </LinearLayout>
+                    <LinearLayout android:layout_height="match_parent" android:weightSum="1" android:layout_width="match_parent" android:id="@+id/LinearLayout14">
+                        <TextView android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_gravity="center_vertical" android:id="@+id/TextView17" android:layout_weight="0.33" android:textAppearance="?android:attr/textAppearanceMedium" android:text="超声波传感器" android:layout_width="0dp"></TextView>
+                        <AbsoluteLayout android:layout_height="match_parent" android:id="@+id/AbsoluteLayout01" android:layout_weight="0.57" android:layout_width="0dp">
+                            <ImageView android:layout_x="2dp" android:scaleType="fitXY" android:layout_y="0dp" android:layout_height="match_parent" android:src="@drawable/robot" android:layout_width="match_parent" android:id="@+id/ImageView01"></ImageView>
+                            <ImageView android:layout_x="100dp" android:scaleType="fitXY" android:layout_y="33dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView07"></ImageView>
+                            <ImageView android:layout_x="155dp" android:scaleType="fitXY" android:layout_y="60dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView04"></ImageView>
+                            <ImageView android:layout_x="55dp" android:scaleType="fitXY" android:layout_y="60dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView02"></ImageView>
+                            <ImageView android:layout_x="55dp" android:scaleType="fitXY" android:layout_y="100dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView05"></ImageView>
+                            <ImageView android:layout_x="155dp" android:scaleType="fitXY" android:layout_y="100dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView06"></ImageView>
+                            <ImageView android:layout_x="100dp" android:scaleType="fitXY" android:layout_y="130dp" android:layout_height="13dp" android:visibility="invisible" android:src="@drawable/button" android:layout_width="22dp" android:id="@+id/ImageView03"></ImageView>
+                        </AbsoluteLayout>
+                        <LinearLayout android:layout_height="132dp" android:weightSum="1" android:orientation="vertical" android:layout_marginLeft="18dp" android:layout_gravity="center" android:layout_width="80dp" android:id="@+id/LinearLayout12">
+                            <TextView android:layout_height="wrap_content" android:id="@+id/TextView02" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_ford" android:layout_width="78dp"></TextView>
+                            <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/TextView14" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_ford_left" android:layout_width="78dp"></TextView>
+                            <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/TextView16" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_ford_right" android:layout_width="78dp"></TextView>
+                            <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/TextView15" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back" android:layout_width="78dp"></TextView>
+                            <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/TextView08" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back_left" android:layout_width="78dp"></TextView>
+                            <TextView android:layout_height="wrap_content" android:layout_marginTop="3dp" android:id="@+id/TextView13" android:textAppearance="?android:attr/textAppearanceSmall" android:text="@string/sensor_back_right" android:layout_width="78dp"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

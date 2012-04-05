@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:weightSum="1">
+    <TextView android:text="环境检测传感器历史数据" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="244dp" android:layout_gravity="center" android:layout_height="0dp" android:layout_weight="0.25"></TextView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_marginTop="15dp" android:layout_height="0dp" android:layout_weight="0.25">
+         <RadioGroup android:id="@+id/rGButtonAttri" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal">
+        <RadioButton android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="wrap_content" android:id="@+id/radioCO" android:text="CO "></RadioButton>
+        <RadioButton android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="wrap_content" android:id="@+id/radioCH4" android:text="甲烷"></RadioButton>
+        <RadioButton android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="wrap_content" android:id="@+id/radioDust" android:text="粉尘"></RadioButton>
+        <RadioButton android:layout_width="61dp" android:layout_weight="0.2" android:layout_height="wrap_content" android:id="@+id/radioHumdity" android:text="湿度"></RadioButton>
+        <RadioButton android:layout_width="0dp" android:layout_weight="0.2" android:layout_height="wrap_content" android:id="@+id/radioTemp" android:text="温度"></RadioButton>
+    	</RadioGroup>
+    </LinearLayout>
+	<LinearLayout android:id="@+id/chart" android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="170dp" android:layout_weight="0.16" />
+        
+    <LinearLayout android:id="@+id/linearLayout2" android:weightSum="1" android:layout_height="0dp" android:baselineAligned="false" android:layout_marginTop="20dp" android:layout_weight="0.25" android:layout_width="match_parent">
+        <RadioGroup android:layout_height="wrap_content" android:id="@+id/rGButtonTime" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_weight="0.64">
+            <RadioButton android:text="最近2分钟" android:layout_weight="0.23" android:layout_height="wrap_content" android:id="@+id/radio2mins" android:layout_width="0dp"></RadioButton>
+            <RadioButton android:text="最近10分钟" android:layout_weight="0.23" android:layout_height="wrap_content" android:id="@+id/radio10mins" android:layout_width="0dp"></RadioButton>
+            <RadioButton android:text="最近1小时" android:layout_weight="0.24" android:layout_height="wrap_content" android:id="@+id/radio1hour" android:layout_width="0dp"></RadioButton>
+        </RadioGroup>
+        <Button android:layout_height="wrap_content" android:id="@+id/btnDrawData" android:text="绘制" android:layout_width="wrap_content" android:layout_weight="0.13"></Button>
+        <Button android:layout_height="wrap_content" android:id="@+id/btnEnvDataBack" android:text="返回" android:layout_width="wrap_content" android:layout_weight="0.13"></Button>
+    	
+    </LinearLayout>
+    
+</LinearLayout>

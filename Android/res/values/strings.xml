@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">CamMonitor</string>
+    <string name="welcome_intro">井下救援机器人监控客户端	</string>
+	<string name="btn_new">增加</string>
+	<string name="btn_modify">修改</string>
+	<string name="btn_delete">删除</string>
+	<string name="connect">连接</string>
+	<string name="table_sql">
+		CREATE TABLE tb_cammonitor_configs (
+		_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+		name VARCHAR(30) NULL,
+		ip VARCHAR(64) NULL,
+		port NUMERIC NULL,
+		username VARCHAR(64) NULL,
+		password VARCHAR(64) NULL,
+		client_dir TEXT NULL,
+		connect_type NUMERIC DEFAULT \'1\' NULL
+		);
+	</string>
+	<string name="drop_sql">
+		drop table if EXISTS tb_cammonitor_configs;
+	</string>
+	<string name="add_title">远程监控服务设置</string>
+	<string name="add_ip">主机名</string>
+	<string name="add_type">类型</string>
+	<string name="add_port">端口</string>
+	<string name="add_username">用户名</string>
+	<string name="add_password">用户密码</string>
+	<string name="add_localdir">本地目录</string>
+	<string name="btn_test">测试</string>
+	<string name="btn_save">保存</string>
+	<string name="btn_cancle">取消</string>
+	<string name="btn_ok">确定</string>
+	<string name="error">错误</string>
+	<string name="error_ip">请输入主机名</string>
+	<string name="error_port">请输入端口</string>
+	<string name="CamMonitorConfigActivty_Cfg_Name">请输入配置的名称</string>
+	<string name="server_disconnect">断开</string>
+	<string name="temperature">温度：     26度</string>
+	<string name="Humidity">湿度：    46%</string>
+	<string name="CO">一氧化碳： 0.05%</string>
+	<string name="CH4">甲烷：    0.03%</string>
+	<string name="Dust">粉尘:200mg/m^3</string>
+	<string name="lifeFind">生命探测仪：  无法现</string>
+	<string name="WorkTime">工作时间： 01:02:41</string>
+	<string name="MainVoltage">主电电压： 12.6V</string>
+	<string name="SubVoltage">副电电压： 14.3V</string>
+	<string name="Signal">信号强度：  50%</string>
+	<string name="btn_history">查看历史数据</string>
+	<string name="btn_alarmSet">设置报警点</string>
+	<string name="btn_stopTurn">停止转动</string>
+	<string name="btn_cancelAlarm">取消报警</string>
+	<string name="btn_config">配置</string>
+	<string name="channel1">通道1：未配置</string>
+	<string name="channel2">通道2：未配置</string>
+	<string name="channel3">通道3：未配置</string>
+	<string name="channel4">通道4：未配置</string>
+	<string name="channel5">通道5：未配置</string>
+	<string name="channel6">通道6：未配置</string>
+	<string name="channel7">通道7：未配置</string>
+	<string name="channel8">通道8：未配置</string>
+	<string name="sensor_ford">正前：障碍</string>
+	<string name="chk_auto">自动避障模式</string>
+	<string name="sensor_ford_left">左前：障碍</string>
+	<string name="sensor_ford_right">右前：无</string>
+	<string name="sensor_back">正后：无</string>
+	<string name="sensor_back_left">左后：无</string>
+	<string name="sensor_back_right">右后：无</string>
+	<string name="chk_man">手动避障模式</string>
+	<string name="chk_auto_path">按预定轨迹行驶</string>
+	<string name="yaw_angle">偏航角：-46.23度</string>
+	<string name="pitch_angle">俯仰角：-6.43度</string>
+	<string name="roll_angle">横滚角：+3.20度</string>
+	<string name="whirling_arm">旋转臂：32.00度</string>
+	<string name="btn_setPoint">放置节点</string>
+	<string name="btn_recvPoint">回收节电</string>
+	<string name="btn_network">网络设置</string>
+	<string name="btn_moreDetail">详细信息-&gt;</string>
+	<string name="pointCnts">放置节点数：2</string>
+	<string name="remaind_pointCnts">剩余节点数：6</string>
+	<string name="intensity_signal">信号强度：40%</string>
+	<string name="robot_ip">机器人IP：192.168.1.2</string>
+	<string name="btn_stopCam">停止监控</string>
+	<string name="btn_CamSave">保存图像</string>
+	<string name="btn_MoveUP">前</string>
+	<string name="btn_MoveDown">后</string>
+	<string name="btn_MoveLeft">左</string>
+	<string name="btn_MoveRight">右</string>
+	<string name="btn_CamRest">复位</string>
+	<string name="btn_CamUP">上</string>
+	<string name="btn_CamDown">下</string>
+	<string name="btn_CamLeft">左</string>
+	<string name="btn_CamRight">右</string>
+	<string name="btn_CamNear">近景</string>
+	<string name="btn_CamFar">远景</string>
+	<string name="btn_anglePlus">+</string>
+	<string name="btn_angleMinus">-</string>
+	<string name="btn_moveStop">停</string>
+	<string name="check_life">探测中：无法现</string>
+	<string name="str_return">返回</string>
+	<color name="blue">#6A82D0</color>
+	<color name="darkgray">#808080FF</color>
+	<color name="green">#9dc774</color>
+	
+</resources>
